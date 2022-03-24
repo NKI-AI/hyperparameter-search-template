@@ -10,6 +10,6 @@ Using Lightning + Hydra + MLFlow + SubmitIt
 ## How to try
 Clone + install dependencies. Create a `.env` file containing a `DATA_DIR` specifying where to find/download the MNIST dataset, and a `MAIN_CONFIG` variable being either `grid` or `bayesian`. The `grid` can be used for grid searches or 'normal' training without any hyperparameter searches at all. The `bayesian` config includes by default an 'Ax' sweeper that will try to optimize the configured metric ('val/acc_best' by default).
 
-The most convenient approach is to use a bash script and submit it to slurm via `sbatch`, see also the explanation written in the [/scripts folder](scripts/README.md)
+The most convenient approach is to use a bash script and submit it to slurm via `sbatch`, see also the explanation written in the [/scripts folder](scripts/)
 ## Acknowledgements
 The Lightning and Hydra parts of this template are largely based upon https://github.com/ashleve/lightning-hydra-template. If you prefer yaml configs instead of the structured ones used in this project, they can be found there as well.
