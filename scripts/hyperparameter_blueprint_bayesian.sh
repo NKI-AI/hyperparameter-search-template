@@ -32,7 +32,7 @@ MLFLOW_BACKEND_STORE_DIR=/home/e.marcus/mlflow_outputs/multimodal/
 MLFLOW_ARTIFACT_DIR=/home/e.marcus/mlflow_artifacts/multimodal/
 
 # Hyperparameter config -- ax example:
-HYPERPARAMETERS="model.net.lin1_size=256,512 trainer.max_epochs=100,200"
+HYPERPARAMETERS="model.net.lin1_size=choice(256,512) trainer.max_epochs=choice(10,20)"
 
 # --------------------------------------------------------------------------------------------
 # Fixed config below, propagating the above parameters to the code and setting up the launcher
