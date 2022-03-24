@@ -1,0 +1,33 @@
+[tool.pylint.messages_control]
+disable = "C0330, C0326, W1203, C0415"
+
+[tool.pylint.basic]
+good-names="i,j,k,x,y,ex,Run,_"
+
+[tool.pylint.'TYPECHECK']
+generated-members=['numpy.*', 'torch.*', 'np.*']
+
+[tool.pylint.format]
+max-line-length = "120"
+
+[tool.pylint.design]
+max-args=20
+max-branches=30
+max-parents=15
+max-attributes=10
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py38, py39
+skip_missing_interpreters=true
+[gh-actions]
+python =
+    3.8: py38
+    3.9: py39
+[testenv]
+deps = pytest
+extras = dev
+allowlist_externals = sh
+commands= sh -c "pytest"
+"""
