@@ -20,7 +20,7 @@ class LocalConfig(LocalQueueConf):
 class SlurmConfig(SlurmQueueConf):
     """Configuration for submitit_slurm. These parameters can be overwritten in the cli with hydra.launcher.something_below=.."""
 
-    # partition: str = "gpu_titanrtx_shared"
+    partition: str = "gpu_titanrtx_shared"
     gpus_per_node: int = 1
     tasks_per_node: int = 1
     cpus_per_task: int = 6
