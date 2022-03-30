@@ -32,11 +32,11 @@ class MNISTLitModule(LightningModule):
         # ensures init params will be stored in ckpt
         self.save_hyperparameters(logger=False)
 
-        self.net = net
-        self.optimizer_config = optimizer_config
+        self.net = self.hparams.net
+        self.optimizer_config = self.hparams.optimizer_config
 
         # loss function
-        self.criterion = loss
+        self.criterion = self.hparams.loss
 
         # use separate metric instance for train, val and test step
         # to ensure a proper reduction over the epoch
